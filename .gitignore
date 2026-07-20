@@ -1,0 +1,31 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Java build outputs
+bin/
+build/
+out/
+*.class
+
+# Local tests (not published)
+src/test/
+test.sh
+.github/workflows/ci.yml
+
+# JADE runtime-generated files
+APDescription.txt
+MTPs-Main-Container.txt
+
+# Keep only the JADE runtime distribution required by run.sh
+JADE-all-4.6.0/JADE-doc-4.6.0/
+JADE-all-4.6.0/JADE-src-4.6.0/
+JADE-all-4.6.0/JADE-examples-4.6.0/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
