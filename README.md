@@ -24,29 +24,37 @@ Les choix de séance et l'évaluation Recovery sont portés par deux projets rAi
 
 Java orchestre les agents JADE, les messages FIPA ACL et la boucle de négociation. Il traduit les options rAison en programme lisible et applique les garanties de sécurité négociées.
 
+## Lancer le projet
+
+```bash
+git clone https://github.com/Mr-Noredine/trainmind-multi-agent-negotiation.git
+cd trainmind-multi-agent-negotiation
+cp .env.example .env   # puis renseigner la clé API rAison
+./run.sh               # compile dans bin/ et démarre JADE avec les quatre agents
+```
+
+Sans clé rAison, le code compile mais les agents ne peuvent pas négocier :
+les décisions viennent de l'API rAison. Pour vérifier seulement la compilation :
+
+```bash
+javac -cp JADE-all-4.6.0/JADE-bin-4.6.0/jade/lib/jade.jar -d bin $(find src/main/java -name '*.java')
+```
+
+Compilé avec OpenJDK 21. JADE 4.6.0 est fourni dans le dépôt, rien d'autre à installer.
+
 ## Prérequis
 
-- un JDK avec `javac` et `java` disponibles ;
+- un JDK avec `javac` et `java` disponibles (compilé avec OpenJDK 21) ;
 - `bash` pour exécuter `run.sh` ;
 - un accès réseau à l'API rAison ;
 - une clé API rAison valide pour les deux projets.
 
 La distribution JADE utilisée par le script est fournie dans `JADE-all-4.6.0/`.
 
-## Installation rapide
-
-```bash
-git clone <url-du-depot>
-cd TrainMind
-cp .env.example .env
-# Renseigner ensuite les cles et identifiants rAison dans .env
-./run.sh
-```
-
 ## Structure
 
 ```text
-TrainMind/
+trainmind-multi-agent-negotiation/
 ├── README.md
 ├── run.sh
 ├── .env
@@ -96,7 +104,7 @@ Recovery ne couvre pas encore un contexte.
 
 ## Lancement
 
-Depuis `TrainMind/` :
+Depuis la racine du dépôt :
 
 ```bash
 ./run.sh
