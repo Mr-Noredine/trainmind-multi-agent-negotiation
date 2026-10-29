@@ -24,6 +24,8 @@ Les choix de séance et l'évaluation Recovery sont portés par deux projets rAi
 
 Java orchestre les agents JADE, les messages FIPA ACL et la boucle de négociation. Il traduit les options rAison en programme lisible et applique les garanties de sécurité négociées.
 
+Projet réalisé seul.
+
 ## Lancer le projet
 
 ```bash
